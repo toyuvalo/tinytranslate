@@ -1,0 +1,9 @@
+# Runtime / generated
+.venv/
+config.json
+error.log
+__pycache__/
+*.pyc
+*.pyo
+
+# Screenshots are committed (used in README)
