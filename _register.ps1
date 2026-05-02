@@ -1,4 +1,4 @@
-$ScriptDir  = "C:\Users\toyuv\TinyTranslate"
+$ScriptDir  = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $VenvPython = "$ScriptDir\.venv\Scripts\python.exe"
 if (-not (Test-Path $VenvPython)) {
     Write-Host "ERROR: .venv not found. Run install.ps1 first." -ForegroundColor Red
