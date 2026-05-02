@@ -4,6 +4,18 @@ All notable changes to TinyTranslate will be documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.0.2] — 2026-04-24
+
+### Added
+- `.github/workflows/release.yml` — PyInstaller + Inno Setup CI; auto-builds `TinyTranslate-Setup.exe` + portable zip on every push to master and on version tags (`v*.*.*`). Adapted from ripwave via `/wiki-propagate` cross-repo skill-sharing.
+- `installer/tinytranslate.iss` — Inno Setup installer. Registers HKCU shell-menu for `.txt`/`.docx`/`.pdf` (no admin), places shortcuts, optional desktop icon.
+- Version bump constant `config.py` `VERSION = "1.0.2"`.
+
+### Notes
+- Dynamic per-language menu flyout (`core/registry.py`) still requires running the Settings app after new language packs install — the installer only registers the base "Translate with TinyTranslate" entry.
+
+---
+
 ## [1.0.1] — 2026-03-23
 
 ### Added

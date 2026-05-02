@@ -26,6 +26,12 @@ Right-click any `.txt`, `.docx`, or `.pdf` → pick a language → translated of
 
 ## Install
 
+### Option A — one-click installer (recommended)
+
+Download `TinyTranslate-Setup.exe` from the [latest release](https://github.com/dvlce/tinytranslate/releases/latest) and run it. Registers the right-click menu, creates shortcuts, no admin needed, no Python required.
+
+### Option B — from source
+
 ```powershell
 git clone https://github.com/dvlce/tinytranslate.git
 cd tinytranslate
@@ -99,6 +105,18 @@ Output is always plain UTF-8 text. Docx formatting is not preserved (text conten
 | Python venv (deps) | ~50 MB |
 | EN→FR language pack | ~100 MB |
 | Each additional language pair | ~100 MB |
+
+## Project Structure
+
+| File | Description |
+|---|---|
+| `tinytranslate.py` | Main translation entrypoint (invoked by the right-click menu) |
+| `tinytranslate.ps1` | PowerShell wrapper launched by the shell registration |
+| `config.py` | Config loader / writer (reads `config.json`) |
+| `install.ps1` / `uninstall.ps1` | Shell-menu registration scripts (HKCU, no admin) |
+| `download_model.py` | Manual Argos language-pack download helper |
+| `config.json` | User settings (source/target language, chunk size) — gitignored |
+| `.venv/` | Python virtual environment (created by installer) |
 
 ## Uninstall
 
