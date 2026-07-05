@@ -28,12 +28,12 @@ Right-click any `.txt`, `.docx`, or `.pdf` → pick a language → translated of
 
 ### Option A — one-click installer (recommended)
 
-Download `TinyTranslate-Setup.exe` from the [latest release](https://github.com/dvlce/tinytranslate/releases/latest) and run it. Registers the right-click menu, creates shortcuts, no admin needed, no Python required.
+Download `TinyTranslate-Setup.exe` from the [latest release](https://github.com/toyuvalo/tinytranslate/releases/latest) and run it. Registers the right-click menu, creates shortcuts, no admin needed, no Python required.
 
 ### Option B — from source
 
 ```powershell
-git clone https://github.com/dvlce/tinytranslate.git
+git clone https://github.com/toyuvalo/tinytranslate.git
 cd tinytranslate
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
