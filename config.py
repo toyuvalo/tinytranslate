@@ -5,7 +5,7 @@ config.json lives next to this file and is gitignored — never committed.
 import json
 import os
 
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 # Single source of truth for language names — used by settings.py and core/registry.py
 LANGUAGES = {

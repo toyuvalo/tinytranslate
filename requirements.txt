@@ -1,4 +1,17 @@
 argostranslate>=1.9.0
 python-docx>=0.8.11
 pdfplumber>=0.9.0
-Pillow>=9.0.0
+
+# 2026-08-31 security floors.
+#
+# Pillow was `>=9.0.0`, an open floor. It resolves to a current release today and
+# so audits clean, but the constraint permits every vulnerable 9/10/11 build --
+# a cached wheel, an offline mirror or a pinned-transitive rebuild would install
+# one and nothing would report it. 12.3.0 is the fix for PYSEC-2026-2253/-2255/
+# -2256/-2257.
+Pillow>=12.3.0
+
+# stanza is TRANSITIVE, pulled in by argostranslate -- it is named here only to
+# hold the floor, because argostranslate's own constraint allows 1.10.1, which
+# is exposed to PYSEC-2026-3075 (fix: 1.12.2).
+stanza>=1.12.2
